@@ -106,7 +106,7 @@ header ul {
   color: #ffffff;
 }
 .hero-btn {
-  padding-bottom: 10px;
+  padding-top: 10px;
   padding-left: 32px;
   padding-bottom: 10px;
   padding-right: 32px;
@@ -167,6 +167,11 @@ nav li:not(:last-child) {
 header .contact {
   margin-left: auto;
 }
+
+.contact-header svg {
+  margin-right: 10px;
+}
+
 .contact .contact-header:not(:last-child) {
   margin-right: 50px;
 }
@@ -185,12 +190,12 @@ main .conteiner {
 }
 
 .advantage div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   border-radius: 4px;
-  padding-top: 25px;
-  padding-left: 100px;
-  padding-bottom: 25px;
-  padding-right: 100px;
+
   margin-bottom: 50px;
   background-color: #f5f4fa;
 }
@@ -277,17 +282,19 @@ main .conteiner {
 
 .team-item a {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  padding: 12px;
+
+  color: #afb1b8;
 }
 
-.social-item:hover,
-.social-item:focus {
+.social-item a:hover,
+.social-item a:focus {
   color: #ffffff;
   background-color: var(--focus-link-color);
-  border-radius: 50%;
 }
 .team .icon {
   width: 20px;
@@ -298,9 +305,6 @@ main .conteiner {
   display: flex;
   width: 206px;
   margin: 0 auto;
-}
-.social a:visited {
-  color: inherit;
 }
 
 .clients h2 {
@@ -318,17 +322,15 @@ main .conteiner {
 
 .client-list a {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-  padding-top: 16px;
-  padding-left: 32px;
-  padding-bottom: 16px;
-  padding-right: 32px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  color: inherit;
+  color: #afb1b8;
 }
 
 .client-list a:hover,
@@ -418,9 +420,10 @@ main .conteiner {
 
 .footer-soccial a {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  padding: 12px;
   color: inherit;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -430,6 +433,7 @@ main .conteiner {
   height: 20px;
   width: 20px;
 }
+
 .portfolio-filter {
   justify-content: center;
   display: flex;
@@ -447,8 +451,18 @@ main .conteiner {
 }
 
 .portfolio-filter input[type="radio"] {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 .portfolio-filter label {
   cursor: pointer;
   padding: 7px 15px;
@@ -462,7 +476,9 @@ main .conteiner {
   background-color: #f5f4fa;
 }
 
-.portfolio-filter input[type="radio"]:checked + label {
+.portfolio-filter input[type="radio"]:checked + label,
+.portfolio-filter label:hover,
+.portfolio-filter label:focus {
   background: #2196f3;
   color: #ffffff;
 }
