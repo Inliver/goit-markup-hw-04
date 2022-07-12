@@ -477,8 +477,10 @@ main .conteiner {
 }
 
 .portfolio-filter input[type="radio"]:checked + label,
-.portfolio-filter label:hover,
-.portfolio-filter label:focus {
+/* .portfolio-filter label:hover,
+.portfolio-filter label:focus, */
+.portfolio-filter input[type="radio"]:hover + label,
+.portfolio-filter input[type="radio"]:focus + label {
   background: #2196f3;
   color: #ffffff;
 }
